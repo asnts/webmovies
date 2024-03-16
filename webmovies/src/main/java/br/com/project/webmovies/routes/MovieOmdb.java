@@ -2,7 +2,6 @@ package br.com.project.webmovies.routes;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JacksonStdImpl;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @JacksonStdImpl
 @SpringBootApplication
