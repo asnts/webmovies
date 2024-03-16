@@ -17,6 +17,10 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
+    }
+
     @GetMapping("/omdb/{tema}")
     public ResponseEntity<MovieOmdb> getMovie(@PathVariable String tema){
         try {
@@ -24,6 +28,7 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.OK).body(movieOmdb);
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+
         }
 
     }
